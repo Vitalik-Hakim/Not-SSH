@@ -7,6 +7,7 @@ import os
 #powershell script to enable SSH on windows
 
 def run(self, cmd):
+  
   completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True)
   return completed
 
@@ -33,8 +34,9 @@ while True:
     command = command.decode()
     
     def run(self, cmd):
-    completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True)
-    return completed
+      
+      completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True)
+      return completed
   
     run(command)
 
